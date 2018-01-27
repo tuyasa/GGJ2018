@@ -20,6 +20,7 @@ public class NetworkHack : MonoBehaviour
 	}
 	
 	public NetworkNodePair pair;
+	public GameObject LinkToRepair;
 	// Use this for initialization
 	void Start () {
 		
@@ -30,25 +31,29 @@ public class NetworkHack : MonoBehaviour
 		
 	}
 
-	public void ActivateLink()
+	public void ReActivateLink()
 	{
 		switch (pair.TargetNetworkDirection)
 		{
 			case NetworkDirection.Up:
 				pair.Source.TargetNodeUp = pair.Destination;
 				pair.Destination.TargetNodeDown = pair.Source;
+				LinkToRepair.SetActive(false);
 				break;
 			case NetworkDirection.Down:
 				pair.Source.TargetNodeDown = pair.Destination;
 				pair.Destination.TargetNodeUp = pair.Source;
+				LinkToRepair.SetActive(false);
 				break;
 			case NetworkDirection.Left:
 				pair.Source.TargetNodeLeft = pair.Destination;
 				pair.Destination.TargetNodeRight = pair.Source;
+				LinkToRepair.SetActive(false);
 				break;
 			case NetworkDirection.Right:
 				pair.Source.TargetNodeRight = pair.Destination;
 				pair.Destination.TargetNodeLeft = pair.Source;
+				LinkToRepair.SetActive(false);
 				break;
 			default:
 				throw new ArgumentOutOfRangeException();
