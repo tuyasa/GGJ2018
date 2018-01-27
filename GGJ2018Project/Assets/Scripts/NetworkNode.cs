@@ -63,6 +63,15 @@ public class NetworkNode : MonoBehaviour
     {
         NetworkManager.Instance.Volt.transform.position = node.VoltPlaceHolder.transform.position;
     }
+
+    public void ActivePower()
+    {
+        NetworkHack networkHack = GetComponent<NetworkHack>();
+        if (networkHack)
+        {
+            networkHack.ActivateLink();
+        }
+    }
     
     // activate other node avec qte
     // activate fonctionnalité avec qte

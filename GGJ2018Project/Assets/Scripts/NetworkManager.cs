@@ -43,5 +43,10 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 		{
 			currentNode.SwitchNodeRight();
 		}
+
+		if (Input.GetButtonDown("VoltActivate"))
+		{
+			currentNode.ActivePower();
+		}
 	}
 }

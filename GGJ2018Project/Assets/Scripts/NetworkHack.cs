@@ -27,10 +27,7 @@ public class NetworkHack : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			ActivateLink();
-		}
+		
 	}
 
 	public void ActivateLink()
@@ -39,15 +36,19 @@ public class NetworkHack : MonoBehaviour
 		{
 			case NetworkDirection.Up:
 				pair.Source.TargetNodeUp = pair.Destination;
+				pair.Destination.TargetNodeDown = pair.Source;
 				break;
 			case NetworkDirection.Down:
 				pair.Source.TargetNodeDown = pair.Destination;
+				pair.Destination.TargetNodeUp = pair.Source;
 				break;
 			case NetworkDirection.Left:
 				pair.Source.TargetNodeLeft = pair.Destination;
+				pair.Destination.TargetNodeRight = pair.Source;
 				break;
 			case NetworkDirection.Right:
 				pair.Source.TargetNodeRight = pair.Destination;
+				pair.Destination.TargetNodeLeft = pair.Source;
 				break;
 			default:
 				throw new ArgumentOutOfRangeException();
