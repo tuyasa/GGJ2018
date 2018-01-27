@@ -5,6 +5,7 @@ public class Character : MonoBehaviour {
 	public CharacterType type=CharacterType.Flyer;
 	public float jumpForce;
 	public bool host = true;
+	
 	private bool _isHosting = false;
 	private float _nextJump;
 	private Controller _controller;
@@ -31,7 +32,7 @@ public class Character : MonoBehaviour {
 		
 		if (_isHosting && type.Equals(CharacterType.Jumper)&& _controller.IsGrounded() )
 		{
-			_controller.Jump(jumpForce*10);
+			_controller.Jump(jumpForce*100);
 		}
 		
 	}
@@ -82,7 +83,11 @@ public class Character : MonoBehaviour {
 	{
 		_bio = bio;
 	}
-	
+
+	public bool IsHosting()
+	{
+		return _isHosting;
+	}
 }
 
 public enum CharacterType

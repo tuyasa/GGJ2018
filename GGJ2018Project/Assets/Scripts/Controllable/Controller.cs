@@ -3,7 +3,6 @@
 public class Controller : MonoBehaviour
 {
 	//true if the controlled element is a jumper
-	public bool jumper= false;
 	private Rigidbody2D _rgbd;
 	public LayerMask ground_layers;
 	private Transform _transform;
@@ -20,7 +19,7 @@ public class Controller : MonoBehaviour
 	public bool IsGrounded()
 	{
 		Collider2D _collider = GetComponent<Collider2D>();
-		RaycastHit2D hit = Physics2D.Raycast(_transform.position+Vector3.down*_collider.bounds.extents.y, Vector2.down, 0.02f,ground_layers);
+		RaycastHit2D hit = Physics2D.Raycast(_transform.position+Vector3.down*_collider.bounds.extents.y, Vector2.down, margin,ground_layers);
 		
 		return hit.collider!=null;
 
