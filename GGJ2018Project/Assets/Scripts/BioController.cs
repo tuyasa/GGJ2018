@@ -16,7 +16,6 @@ public class BioController: MonoBehaviour {
 		if (!character) return;
 		character.SetInHostingRange(true);
 		character.SetBio(_transform);
-
 	}
 
 	private void OnTriggerExit2D(Collider2D other)

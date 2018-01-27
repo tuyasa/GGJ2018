@@ -69,7 +69,7 @@ public class NetworkNode : MonoBehaviour
         NetworkHack networkHack = GetComponent<NetworkHack>();
         if (networkHack)
         {
-            networkHack.ActivateLink();
+            networkHack.ReActivateLink();
         }
     }
     
