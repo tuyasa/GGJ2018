@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: cce929c8046d3444980b3cc6d0ea0a5d
-timeCreated: 1517076402
+guid: 77d57c60220f8cd47a2487c214010667
+timeCreated: 1517093975
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Chat_Move_0
-    21300002: Chat_Move_1
-    21300004: Chat_Move_2
-    21300006: Chat_Move_3
-    21300008: Chat_Move_4
-    21300010: Chat_Move_5
-    21300012: Chat_Move_6
-    21300014: Chat_Move_7
+    21300000: Chat_Idle_0
+    21300002: Chat_Idle_1
+    21300004: Chat_Idle_2
+    21300006: Chat_Idle_3
+    21300008: Chat_Idle_4
+    21300010: Chat_Idle_5
+    21300012: Chat_Idle_6
+    21300014: Chat_Idle_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -84,37 +84,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chat_Move_0
+      name: Chat_Idle_0
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 512
-        width: 432
-        height: 401
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,13 +102,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Chat_Move_1
+      name: Chat_Idle_1
       rect:
         serializedVersion: 2
-        x: 584
+        x: 512
         y: 512
-        width: 392
-        height: 404
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,13 +116,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Chat_Move_2
+      name: Chat_Idle_2
       rect:
         serializedVersion: 2
-        x: 1075
+        x: 1024
         y: 512
-        width: 421
-        height: 400
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,13 +130,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Chat_Move_3
+      name: Chat_Idle_3
       rect:
         serializedVersion: 2
-        x: 1592
+        x: 1536
         y: 512
-        width: 412
-        height: 384
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,13 +144,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Chat_Move_4
+      name: Chat_Idle_4
       rect:
         serializedVersion: 2
-        x: 42
+        x: 0
+        y: 2
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Chat_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 512
         y: 0
-        width: 430
-        height: 384
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,41 +172,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Chat_Move_5
+      name: Chat_Idle_6
       rect:
         serializedVersion: 2
-        x: 568
-        y: 3
-        width: 428
-        height: 389
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Chat_Move_6
-      rect:
-        serializedVersion: 2
-        x: 1066
-        y: 3
-        width: 434
-        height: 397
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Chat_Move_7
-      rect:
-        serializedVersion: 2
-        x: 1583
+        x: 1022
         y: 0
-        width: 409
-        height: 400
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Chat_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

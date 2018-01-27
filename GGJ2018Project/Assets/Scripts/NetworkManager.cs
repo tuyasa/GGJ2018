@@ -13,9 +13,14 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 
 	public Sprite RightSprite;
 
+	public bool IsFree = false;
+
+	public PlasmaBowl PlasmaBowl;
+
 	private void Awake()
 	{
 		Volt.transform.position = currentNode.VoltPlaceHolder.transform.position;
+		
 	}
 
 	// Use this for initialization
@@ -25,7 +30,8 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 	
 	// Update is called once per frame
 	void Update () {
-		HandleNetworkInput();
+		if(IsFree)
+			HandleNetworkInput();
 	}
 	
 	void HandleNetworkInput()
@@ -48,5 +54,13 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 		{
 			currentNode.ActivePower();
 		}
+	}
+
+	public void FreeVolt()
+	{
+		Volt.GetComponent<SpriteRenderer>().enabled = true;
+		currentNode.SwitchNodeDown();
+		IsFree = true;
+		PlasmaBowl.Disable();
 	}
 }

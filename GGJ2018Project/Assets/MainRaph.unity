@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 109245942}
   time: 4
+  PingPong: 0
 --- !u!1 &109245941
 GameObject:
   m_ObjectHideFlags: 0

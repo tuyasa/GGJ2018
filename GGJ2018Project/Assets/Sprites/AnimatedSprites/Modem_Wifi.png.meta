@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1d36d4ccea9cae24e954f460dd553401
-timeCreated: 1517072481
+timeCreated: 1517094374
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,14 @@ TextureImporter:
     21300010: Modem_Wifi (1)_5
     21300012: Modem_Wifi (1)_6
     21300014: Modem_Wifi (1)_7
+    21300016: Modem_Wifi_0
+    21300018: Modem_Wifi_1
+    21300020: Modem_Wifi_2
+    21300022: Modem_Wifi_3
+    21300024: Modem_Wifi_4
+    21300026: Modem_Wifi_5
+    21300028: Modem_Wifi_6
+    21300030: Modem_Wifi_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -108,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Modem_Wifi (1)_0
+      name: Modem_Wifi_0
       rect:
         serializedVersion: 2
         x: 0
@@ -122,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Modem_Wifi (1)_1
+      name: Modem_Wifi_1
       rect:
         serializedVersion: 2
         x: 512
@@ -136,7 +144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Modem_Wifi (1)_2
+      name: Modem_Wifi_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -150,7 +158,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Modem_Wifi (1)_3
+      name: Modem_Wifi_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -164,7 +172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Modem_Wifi (1)_4
+      name: Modem_Wifi_4
       rect:
         serializedVersion: 2
         x: 0
@@ -178,7 +186,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Modem_Wifi (1)_5
+      name: Modem_Wifi_5
       rect:
         serializedVersion: 2
         x: 512
@@ -192,7 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Modem_Wifi (1)_6
+      name: Modem_Wifi_6
       rect:
         serializedVersion: 2
         x: 1024
@@ -206,7 +214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Modem_Wifi (1)_7
+      name: Modem_Wifi_7
       rect:
         serializedVersion: 2
         x: 1536
