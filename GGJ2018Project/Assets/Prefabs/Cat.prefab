@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 114957007266422200}
   - component: {fileID: 114364440640200634}
   - component: {fileID: 50619448262504346}
-  - component: {fileID: 60095884172993260}
+  - component: {fileID: 61463862459351502}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401128207544170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.028, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4507555273475250}
@@ -123,8 +123,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60095884172993260
-PolygonCollider2D:
+--- !u!61 &61463862459351502
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -135,7 +135,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.6050166, y: -0.9831505}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -144,19 +144,10 @@ PolygonCollider2D:
     adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Points:
-    m_Paths:
-    - - {x: 1.7164489, y: 0.35995117}
-      - {x: 1.4501868, y: -1.7822723}
-      - {x: 1.0231105, y: -0.54977196}
-      - {x: -0.39356053, y: 1.0562229}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: -0.6491196, y: -2.4816494}
-      - {x: 1.3586723, y: -2.4459069}
-      - {x: 1.717918, y: -2.3060272}
-      - {x: 2.4409647, y: 0.3792956}
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6133773, y: 2.966301}
+  m_EdgeRadius: 0
 --- !u!114 &114364440640200634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  type: 0
+  type: 1
   jumpForce: 100
   host: 1
 --- !u!114 &114957007266422200
