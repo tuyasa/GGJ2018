@@ -18,22 +18,6 @@ public class Controller : MonoBehaviour
 		_transform = GetComponent<Transform>();
 		_rgbd = GetComponent<Rigidbody2D>();
 	}
-
-	// Use this for initialization
-	void Start ()
-	{
-
-	}
-	
-	
-	private void FixedUpdate()
-	{
-		
-		
-		
-		
-	}
-
 	public bool IsGrounded()
 	{
 		Collider2D _collider = GetComponent<Collider2D>();
