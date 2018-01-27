@@ -21,15 +21,17 @@ public class Inputs : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		handleInput();
+		HandleInput();
 	}
 
-	private void handleInput()
+	private void HandleInput()
 	{
-		if (Input.GetButtonDown("BioJump"))
+		if (Input.GetButton("BioJump"))
 		{
-			_character.jump();
+			_character.Jump();
 			
 		}
+			_character.Move(Input.GetAxis("BioHorizontal"), Input.GetAxis("BioVertical"));
+		 
 	}
 }
