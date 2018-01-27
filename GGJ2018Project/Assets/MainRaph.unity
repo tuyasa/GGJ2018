@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetNodeLeft: {fileID: 0}
-  TargetNodeRight: {fileID: 0}
+  TargetNodeRight: {fileID: 1196831104}
   TargetNodeUp: {fileID: 0}
   TargetNodeDown: {fileID: 0}
 --- !u!1 &1570545014
@@ -457,7 +457,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13.48
+  orthographic size: 5.37
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

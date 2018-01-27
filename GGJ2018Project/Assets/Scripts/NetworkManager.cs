@@ -13,18 +13,19 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 	void Update () {
 		HandleNetworkInput();
 	}
+	
 	void HandleNetworkInput()
 	{
-		if (Input.GetButtonDown("Up"))
+		if (Input.GetButtonDown("VoltUp"))
 		{
 			currentNode.SwitchNodeUp();
-		}else if (Input.GetButtonDown("Down"))
+		}else if (Input.GetButtonDown("VoltDown"))
 		{
 			currentNode.SwitchNodeDown();
-		}else if (Input.GetButtonDown("Left"))
+		}else if (Input.GetButtonDown("VoltLeft"))
 		{
 			currentNode.SwitchNodeLeft();
-		}else if (Input.GetButtonDown("Right"))
+		}else if (Input.GetButtonDown("VoltRight"))
 		{
 			currentNode.SwitchNodeRight();
 		}
