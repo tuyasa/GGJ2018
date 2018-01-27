@@ -32,18 +32,18 @@ public class Controller : MonoBehaviour
 	{
 		
 		
-		Vector2 rigidMovement  = new Vector2(hMove,vMove);
-
-		_rgbd.MovePosition(_rgbd.position+rigidMovement );
-
-		if ( Time.time > nextJumpTime )
-		{
-			
-			float jump = Inputs.GetAxis("BioJump")*jumpForce;
-			nextJumpTime = Time.time + jump_cooldown;
-			_rgbd.AddForce(new Vector2(0,jump),ForceMode2D.Impulse);
-
-		}
+//		Vector2 rigidMovement  = new Vector2(hMove,vMove);
+//
+//		_rgbd.MovePosition(_rgbd.position+rigidMovement );
+//
+//		if ( Time.time > nextJumpTime )
+//		{
+//			
+//			float jump = Inputs.GetAxis("BioJump")*jumpForce;
+//			nextJumpTime = Time.time + jump_cooldown;
+//			_rgbd.AddForce(new Vector2(0,jump),ForceMode2D.Impulse);
+//
+//		}
 		
 	}
 
