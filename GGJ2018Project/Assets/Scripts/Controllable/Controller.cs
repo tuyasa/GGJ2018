@@ -3,7 +3,6 @@
 public class Controller : MonoBehaviour
 {
 	//true if the controlled element is a jumper
-	public bool jumper= false;
 	private Rigidbody2D _rgbd;
 	public LayerMask ground_layers;
 	private Transform _transform;
