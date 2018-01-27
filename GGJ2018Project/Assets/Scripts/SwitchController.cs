@@ -8,10 +8,11 @@ public class SwitchController : MonoBehaviour
 {
 	public UnityEvent triggerEvent;
 
-	public Collider2D triggerArea;
-
-	private void OnTriggerEnter(Collider other)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
+	
+	
+		Debug.Log("triggered");
 		Character character = other.gameObject.GetComponent<Character>();
 		if (character && character.IsHosting()) 
 		{
@@ -19,14 +20,4 @@ public class SwitchController : MonoBehaviour
 		}
 	}
 
-	// Use this for initialization
-	void Start () {
-			
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
 }
