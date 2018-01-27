@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using UnityEngine;
 
-public class Controllable : MonoBehaviour
+public class Controller : MonoBehaviour
 {
 	//true if the controlled element is a jumper
 	public bool jumper= false;
@@ -39,11 +39,26 @@ public class Controllable : MonoBehaviour
 		if ( Time.time > nextJumpTime )
 		{
 			
-			float jump = Input.GetAxis("BioJump")*jumpForce;
+			float jump = Inputs.GetAxis("BioJump")*jumpForce;
 			nextJumpTime = Time.time + jump_cooldown;
 			_rgbd.AddForce(new Vector2(0,jump),ForceMode2D.Impulse);
 
 		}
+		
+	}
+
+	public bool grounded()
+	{
+		throw new NotImplementedException();
+	}
+
+	public void jump()
+	{
+		throw new NotImplementedException();
+	}
+
+	public void move()
+	{
 		
 	}
 }

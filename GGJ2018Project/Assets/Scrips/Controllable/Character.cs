@@ -7,6 +7,14 @@ public class Character : MonoBehaviour {
 
 	public float jumpForce;
 	
+	private float _nextJump;
+	private Controller _controller;
+
+	private void Awake()
+	{
+		_controller = GetComponent<Controller>();
+	}
+
 	// Use this for initialization
 	void Start () {
 		
@@ -14,6 +22,15 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
+
+	public void jump()
+	{
+		if (_controller.grounded())
+		{
+			_controller.jump();
+		}
 		
 	}
 }
