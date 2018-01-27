@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class NetworkNode : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class NetworkNode : MonoBehaviour
     public NetworkNode TargetNodeUp;
     public NetworkNode TargetNodeDown;
     public GameObject VoltPlaceHolder;
+    public UnityEvent ActivePowerEvent;
 
     // Use this for initialization
     void Start()
@@ -25,8 +28,7 @@ public class NetworkNode : MonoBehaviour
         {
             NetworkManager.Instance.currentNode = TargetNodeLeft;
             MoveVolt(TargetNodeLeft);
-        }
-            
+        }           
     }
 
     public void SwitchNodeRight()
@@ -35,8 +37,7 @@ public class NetworkNode : MonoBehaviour
         {
             NetworkManager.Instance.currentNode = TargetNodeRight;
             MoveVolt(TargetNodeRight);
-        }
-            
+        }    
     }
 
     public void SwitchNodeUp()
@@ -45,8 +46,7 @@ public class NetworkNode : MonoBehaviour
         {
             NetworkManager.Instance.currentNode = TargetNodeUp;
             MoveVolt(TargetNodeUp);
-        }
-            
+        }            
     }
 
     public void SwitchNodeDown()
@@ -55,8 +55,7 @@ public class NetworkNode : MonoBehaviour
         {
             NetworkManager.Instance.currentNode = TargetNodeDown;
             MoveVolt(TargetNodeDown);
-        }
-            
+        }   
     }
 
     public void MoveVolt(NetworkNode node)
@@ -66,11 +65,7 @@ public class NetworkNode : MonoBehaviour
 
     public void ActivePower()
     {
-        NetworkHack networkHack = GetComponent<NetworkHack>();
-        if (networkHack)
-        {
-            networkHack.ReActivateLink();
-        }
+        ActivePowerEvent.Invoke();
     }
     
     // activate other node avec qte
