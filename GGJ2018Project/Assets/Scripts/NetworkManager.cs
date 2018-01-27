@@ -4,6 +4,20 @@ using UnityEngine;
 public class NetworkManager : PersistentSingleton<NetworkManager>
 {
 	public NetworkNode currentNode;
+	public Volt Volt;
+	public Sprite UpSprite;
+
+	public Sprite DownSprite;
+
+	public Sprite LeftSprite;
+
+	public Sprite RightSprite;
+
+	private void Awake()
+	{
+		Volt.transform.position = currentNode.VoltPlaceHolder.transform.position;
+	}
+
 	// Use this for initialization
 	void Start () {
 		
@@ -30,5 +44,4 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 			currentNode.SwitchNodeRight();
 		}
 	}
-	
 }
