@@ -1,9 +1,4 @@
-﻿
-using System;
-using System.Diagnostics;
-using System.Runtime.Remoting.Messaging;
-using UnityEngine;
-using Debug = UnityEngine.Debug;
+﻿using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
@@ -12,11 +7,15 @@ public class Controller : MonoBehaviour
 	private Rigidbody2D _rgbd;
 	public LayerMask ground_layers;
 	private Transform _transform;
+	private Transform _bioPlacement;
 	public float margin;
+	
+
 	private void Awake()
 	{
 		_transform = GetComponent<Transform>();
 		_rgbd = GetComponent<Rigidbody2D>();
+		_bioPlacement = _transform.Find("BioSpot");
 	}
 	public bool IsGrounded()
 	{
@@ -37,5 +36,13 @@ public class Controller : MonoBehaviour
 		_rgbd.velocity = mouvement;
 	}
 
+
+	public void Host(Transform bio)
+	{
+		bio.SetParent(_bioPlacement);
+		bio.transform.position = _bioPlacement.position;
+	}
+
+	
 	
 }
