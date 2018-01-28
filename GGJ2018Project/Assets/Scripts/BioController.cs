@@ -23,6 +23,6 @@ public class BioController: MonoBehaviour {
 		var character = other.gameObject.GetComponent<Character>();
 		if (!character) return;
 		character.SetInHostingRange(false);
-		character.SetBio(null);
+//		character.SetBio(null);
 	}
 }

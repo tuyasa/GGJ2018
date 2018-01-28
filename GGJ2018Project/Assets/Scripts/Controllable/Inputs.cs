@@ -23,6 +23,7 @@ public class Inputs : MonoBehaviour
 
 	public void OnMouseDown()
 	{
+			Debug.Log("Clicked");
 		_character.Host();
 	}
 

@@ -10,8 +10,8 @@ public class Character : MonoBehaviour {
 	private bool _isHosting = false;
 	private float _nextJump;
 	private Controller2D _controller;
-	private bool _inHostingRange;
-	private Transform _bio;
+	public bool _inHostingRange;
+	public Transform _bio;
 
 	public bool grounded;
 	private Vector2 velocity;
@@ -19,12 +19,14 @@ public class Character : MonoBehaviour {
 	private SpriteRenderer characterSprite;
 	
 	private Transform _transform;
-	private Transform _bioPlacement;
+	public Transform _bioPlacement;
 	private float _normalizedHorizontalSpeed;
 	private float _normalizedVerticalSpeed;
 	private bool IsFacingRight;
 	private float velocityXSmoothing;
 	private float velocityYSmoothing;
+	
+	public bool CantMove;
 
 	public bool _idle;
 	public bool _walk;
@@ -38,7 +40,9 @@ public class Character : MonoBehaviour {
 	{
 		_controller = GetComponent<Controller2D>();
 		_transform = GetComponent<Transform>();
+		
 		_bioPlacement = _transform.Find("BioSpot");
+		Debug.Log(_bioPlacement);
 		IsFacingRight = false;
 		_animator = GetComponent<Animator>();
 		characterSprite = GetComponent<SpriteRenderer>();
@@ -74,7 +78,7 @@ public class Character : MonoBehaviour {
 
 	public void SetInput(float hMove, float vMove)
 	{
-		if(!_isHosting)
+		if(!_isHosting || CantMove)
 			return;
 		HandleHorizontalMovement(hMove);
 		if (!type.Equals(CharacterType.Jumper))
@@ -140,7 +144,6 @@ public class Character : MonoBehaviour {
 		float targetVelocityY = _normalizedVerticalSpeed * ySpeed;
 		float newVerticalForce =
 			Mathf.SmoothDamp(_controller.Velocity.y, targetVelocityY, ref velocityYSmoothing, 0.3f);
-
 		_controller.SetYVelocity(newVerticalForce);
 	}
 

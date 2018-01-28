@@ -6,7 +6,7 @@ using UnityEngine;
 public class SwitchSpriteController : MonoBehaviour
 {
 	public Sprite []newSprites;
-	public SpriteRenderer _spriteRenderer;
+	private SpriteRenderer _spriteRenderer;
 	public int index;
 
 	private void Awake()
@@ -26,10 +26,13 @@ public class SwitchSpriteController : MonoBehaviour
 
 	public void SwitchSprite()
 	{
-		Debug.Log(newSprites.Length);
+		if (index < newSprites.Length)
+		{
+			_spriteRenderer.sprite = newSprites[index];
+			index++;
+			Debug.Log("switch sprite");
+		}
 		
-		Debug.Log("switch sprite");
-		_spriteRenderer.sprite = newSprites[index];
-		index++;
+		
 	}
 }
