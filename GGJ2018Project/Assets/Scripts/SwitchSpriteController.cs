@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class Lamp : MonoBehaviour
+public class SwitchSpriteController : MonoBehaviour
 {
-	public Sprite activate;
-	public Sprite deactivate;
-
+	public Sprite []newSprites;
 	private SpriteRenderer _spriteRenderer;
+	private int i = 0;
 
 	private void Awake()
 	{
@@ -25,13 +24,11 @@ public class Lamp : MonoBehaviour
 		
 	}
 
-	public void DesactivateLamp()
+	public void SwitchSprite()
 	{
-		_spriteRenderer.sprite = deactivate;
-	}
-
-	public void ActiveLamp()
-	{
-		_spriteRenderer.sprite = activate;
+		if(newSprites.Length >= i)
+			return;
+		_spriteRenderer.sprite = newSprites[i];
+		i++;
 	}
 }

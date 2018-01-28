@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class Toaster : MonoBehaviour
 {
+	public GameObject toasterSmoke;
+	public GameObject toasterHeat;
 
-	private Animator _animator;
+	public SwitchSpriteController SwitchSpriteController;
+	public MoveObject2D human;
+	public int state = 0;
 	// Use this for initialization
+
+	private void Awake()
+	{
+		toasterHeat.SetActive(false);
+		toasterSmoke.SetActive(false);
+	}
+
 	void Start ()
 	{
-		_animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -17,8 +27,39 @@ public class Toaster : MonoBehaviour
 		
 	}
 
-	public void ChangeState()
+	public void Activate()
 	{
+		state++;
+		if (state == 1)
+		{
+			StateOne();
+		}else if (state == 2)
+		{
+			StateTwo();
+		}else if (state == 0)
+		{
+			
+		}
+	}
+
+	public void StateOne()
+	{
+		toasterHeat.SetActive(true);
+		SwitchSpriteController.SwitchSprite();
+	}
+
+	public void StateTwo()
+	{
+		toasterSmoke.SetActive(true);
+		SwitchSpriteController.SwitchSprite();
 		
 	}
+
+	public void StateZero()
+	{
+		toasterHeat.SetActive(false);
+		toasterSmoke.SetActive(false);
+	}
+	
+	
 }

@@ -33,7 +33,7 @@ public class MoveObject2D : MonoBehaviour
 		Vector2 startPosition = transform.position;
 		while (t <= time)
 		{
-			transform.position = Vector2.Lerp(startPosition, destination.position, t);
+			transform.position = Vector2.Lerp(startPosition, destination.position, t / time);
 			t += Time.deltaTime;
 			yield return null;
 		}

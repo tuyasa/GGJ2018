@@ -170,7 +170,7 @@ InputManager:
     descriptiveName: Bio Jump Control
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: space
+    positiveButton: mouse 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
