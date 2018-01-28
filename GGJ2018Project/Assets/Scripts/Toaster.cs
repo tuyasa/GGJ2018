@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Managers;
 using UnityEngine;
 
 public class Toaster : MonoBehaviour
@@ -10,6 +11,8 @@ public class Toaster : MonoBehaviour
 	public SwitchSpriteController SwitchSpriteController;
 	public MoveObject2D human;
 	public int state = 0;
+	
+	public AudioClip toasting;
 	// Use this for initialization
 
 	private void Awake()
@@ -32,6 +35,8 @@ public class Toaster : MonoBehaviour
 		state++;
 		if (state == 1)
 		{
+			
+			SoundManager.Instance.PlaySoundSFX(toasting);
 			StateOne();
 		}else if (state == 2)
 		{
