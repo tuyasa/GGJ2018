@@ -149,9 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 568386a735fc516458597bcd9093466b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toasterSmoke: {fileID: 1444109264570162}
-  toasterHeat: {fileID: 1116289452998818}
+  toasterSmoke: {fileID: 1116289452998818}
+  toasterHeat: {fileID: 1444109264570162}
   SwitchSpriteController: {fileID: 114741076735703836}
+  human: {fileID: 0}
+  state: 0
+  toasting: {fileID: 0}
 --- !u!114 &114741076735703836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,6 +169,7 @@ MonoBehaviour:
   newSprites:
   - {fileID: 21300002, guid: f01fcb573178c2c4baf9ff77453cb21f, type: 3}
   - {fileID: 21300004, guid: f01fcb573178c2c4baf9ff77453cb21f, type: 3}
+  index: 0
 --- !u!212 &212319294665055160
 SpriteRenderer:
   m_ObjectHideFlags: 1

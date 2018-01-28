@@ -110,6 +110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Off: {fileID: 21300002, guid: c00ec56f3bfbb83429cce5ab56c34367, type: 3}
   On: {fileID: 21300000, guid: c00ec56f3bfbb83429cce5ab56c34367, type: 3}
+  OnSD: {fileID: 0}
+  OffSD: {fileID: 0}
 --- !u!114 &114864001639668892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4818a4af667843a45874069adeff7b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Activate: 1
   triggerEvent:
     m_PersistentCalls:
       m_Calls:
@@ -146,9 +149,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Counter: 1
 --- !u!212 &212736903615294048
 SpriteRenderer:
   m_ObjectHideFlags: 1
