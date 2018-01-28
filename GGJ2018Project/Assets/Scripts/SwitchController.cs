@@ -1,19 +1,20 @@
+<<<<<<< HEAD
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class SwitchController : MonoBehaviour
 {
 	public UnityEvent triggerEvent;
-	public bool Activable = false;
 
+	public int Counter = 1;
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if(!Activable)
-			return;
+
 		Character character = other.gameObject.GetComponent<Character>();
-		if (character && character.IsHosting()) 
+		if (character && character.IsHosting() && Counter>0) 
 		{
 			triggerEvent.Invoke();
+			Counter -= 1;
 		}
 	}
 
