@@ -21,8 +21,8 @@ public class SwitchController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (Activate)
-		{
+		if (Activate && other.gameObject.GetComponent<Character>() != null)
+		{	
 			triggerEvent.Invoke();
 		}
 	}
