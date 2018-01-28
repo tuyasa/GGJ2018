@@ -21,6 +21,7 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 	{
 		Volt.transform.position = currentNode.VoltPlaceHolder.transform.position;
 		
+		
 	}
 
 	// Use this for initialization

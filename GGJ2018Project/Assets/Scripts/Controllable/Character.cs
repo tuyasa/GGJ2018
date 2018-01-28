@@ -1,4 +1,4 @@
-﻿using Managers;
+﻿﻿using Managers;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
@@ -32,10 +32,12 @@ public class Character : MonoBehaviour {
 	public bool _idle;
 	public bool _walk;
 	public bool _action;
-
+	public bool _sleep;
+	
 	public bool HasIdle;
 	public bool HasWalk;
 	public bool HasAction;
+	public bool HasSleep;
 
 	private Animator _animator;
 	public AudioClip controlSFX;
@@ -86,6 +88,9 @@ public class Character : MonoBehaviour {
 			_animator.SetBool("walk", _walk);
 		if(HasAction)
 			_animator.SetBool("action", _action);
+		if(HasSleep)
+			_animator.SetBool("sleep",_sleep);
+		
 	}
 
 	public void SetInput(float hMove, float vMove)
@@ -207,6 +212,22 @@ public class Character : MonoBehaviour {
 	{
 		IsFacingRight = !IsFacingRight;
 		characterSprite.flipX = IsFacingRight;
+	}
+
+	public void fallAsleep()
+	{
+		if (HasSleep)
+		{
+			_sleep = true;
+			_walk = false;
+		}
+	}
+
+	public void wake()
+	{
+		_sleep = false;
+		_idle = true;
+		_controller.enabled = true;
 	}
 }
 
