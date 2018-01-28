@@ -20,4 +20,9 @@ public class LevelManager : PersistentSingleton<LevelManager> {
 		SceneManager.LoadScene(index);
 	}
 
+	public void Quit()
+	{
+		Application.Quit();
+	}
+
 }
