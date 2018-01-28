@@ -2360,7 +2360,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4451667807615036, guid: 5cd7e2c136fb3cf42b8c58bbb2a85081, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114598898045028492, guid: 5cd7e2c136fb3cf42b8c58bbb2a85081,
         type: 2}
@@ -4290,6 +4290,11 @@ Prefab:
       propertyPath: OffSD
       value: 
       objectReference: {fileID: 8300000, guid: 1cebc0e804ded914bb4600c5baaef11f, type: 3}
+    - target: {fileID: 114027392686623514, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: backgroundSD
+      value: 
+      objectReference: {fileID: 8300000, guid: 17bf4ce5105aa364bb934edb85fdf452, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb6ed36133ac7124d9ee2e4082dda239, type: 2}
   m_IsPrefabParent: 0
@@ -4468,6 +4473,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  LampSwitchSpriteController: {fileID: 0}
 --- !u!50 &1270223091
 Rigidbody2D:
   serializedVersion: 4
