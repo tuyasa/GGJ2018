@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Managers;
+using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
 public class Character : MonoBehaviour {
@@ -33,7 +34,9 @@ public class Character : MonoBehaviour {
 	public bool HasWalk;
 
 	private Animator _animator;
-	
+	public AudioClip controlSFX;
+	public AudioClip jumpSFX;
+
 	private void Awake()
 	{
 		_controller = GetComponent<Controller2D>();
@@ -59,7 +62,12 @@ public class Character : MonoBehaviour {
 	{
 		if (_isHosting && type.Equals(CharacterType.Jumper) && _controller.State.below)
 		{
+			
 			_controller.SetYVelocity(jumpForce);
+			if (jumpSFX)
+			{
+				SoundManager.Instance.PlaySoundSFX(jumpSFX);
+			}
 		}
 		
 	}
@@ -155,6 +163,10 @@ public class Character : MonoBehaviour {
 				oldCharacter.BioOut();
 			}
 
+			if (controlSFX)
+			{
+				SoundManager.Instance.PlaySoundSFX(controlSFX);
+			}
 			_bio.SetParent(_bioPlacement);
 			_bio.transform.position = _bioPlacement.position;
 			this._isHosting = true;
