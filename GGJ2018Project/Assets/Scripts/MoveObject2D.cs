@@ -24,10 +24,10 @@ public class MoveObject2D : MonoBehaviour
 
 	public void MoveAlongPath()
 	{
-		StartCoroutine(MoveAlongPathCor());
+		StartCoroutine(MoveAlongPathCor(this.destination));
 	}
 
-	IEnumerator MoveAlongPathCor()
+	IEnumerator MoveAlongPathCor(Transform destination)
 	{
 		float t = 0f;
 		Vector2 startPosition = transform.position;
@@ -37,17 +37,11 @@ public class MoveObject2D : MonoBehaviour
 			t += Time.deltaTime;
 			yield return null;
 		}
+		
 	}
 	
-	IEnumerator MoveAlongPathCorDestinationSource()
+	public void MoveAlongPathPoint(Transform point)
 	{
-		float t = 0f;
-		Vector2 startPosition = transform.position;
-		while (t <= time)
-		{
-			transform.position = Vector2.Lerp(startPosition, destination.position, t);
-			t += Time.deltaTime;
-			yield return null;
-		}
+		StartCoroutine(MoveAlongPathCor(point));
 	}
 }

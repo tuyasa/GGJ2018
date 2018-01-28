@@ -52,7 +52,10 @@ public class Toaster : MonoBehaviour
 	{
 		toasterSmoke.SetActive(true);
 		SwitchSpriteController.SwitchSprite();
-		
+		human.MoveAlongPath();
+		Character character = human.GetComponent<Character>();
+		character._walk = true;
+		Invoke("ResetStateAction", human.time);
 	}
 
 	public void StateZero()
@@ -60,6 +63,13 @@ public class Toaster : MonoBehaviour
 		toasterHeat.SetActive(false);
 		toasterSmoke.SetActive(false);
 	}
+
+	public void ResetStateAction()
+	{
+		Character character = human.GetComponent<Character>();
+		character._walk = true;
+	}
+	
 	
 	
 }

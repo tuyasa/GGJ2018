@@ -152,9 +152,11 @@ MonoBehaviour:
   ySpeed: 12.5
   type: 1
   jumpForce: 25
-  host: 1
   grounded: 0
-  characterSprite: {fileID: 212273175851629030}
+  _idle: 0
+  _walk: 0
+  HasIdle: 1
+  HasWalk: 1
 --- !u!114 &114088997224064754
 MonoBehaviour:
   m_ObjectHideFlags: 1

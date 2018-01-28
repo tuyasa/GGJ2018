@@ -26,8 +26,8 @@ public class Character : MonoBehaviour {
 	private float velocityXSmoothing;
 	private float velocityYSmoothing;
 
-	private bool _idle;
-	private bool _walk;
+	public bool _idle;
+	public bool _walk;
 
 	public bool HasIdle;
 	public bool HasWalk;
