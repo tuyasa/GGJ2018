@@ -15,7 +15,8 @@ namespace Managers
 			AudioSource audioSource = go.GetComponent<AudioSource>();
 			audioSource.clip = audioClip;
 			audioSource.Play();
-			Destroy(go.gameObject, audioClip.length);
+			if(audioClip != null)
+				Destroy(go.gameObject, audioClip.length);
 		}
 
 		public void PlayeBackgroundMusic(AudioClip audioClip)

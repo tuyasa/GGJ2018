@@ -1,7 +1,10 @@
 ﻿using Managers;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class LevelManager : PersistentSingleton<NetworkManager> {
+public class LevelManager : PersistentSingleton<LevelManager> {
 
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -11,4 +14,10 @@ public class LevelManager : PersistentSingleton<NetworkManager> {
 	void Update () {
 		
 	}
+
+	public void ChangeSceneTo(int index)
+	{
+		SceneManager.LoadScene(index);
+	}
+
 }
