@@ -86,6 +86,11 @@ MonoBehaviour:
   TargetNodeUp: {fileID: 0}
   TargetNodeDown: {fileID: 0}
   VoltPlaceHolder: {fileID: 0}
+  ActivePowerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212111412886300440
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -120,7 +125,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c70643e6ff1479d4084b5fe29afd1b36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95f85bdea30cdf840bc61767db2210e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
