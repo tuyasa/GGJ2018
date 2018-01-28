@@ -23,7 +23,7 @@ public class Character : MonoBehaviour {
 	public Transform _bioPlacement;
 	private float _normalizedHorizontalSpeed;
 	private float _normalizedVerticalSpeed;
-	private bool IsFacingRight;
+	public bool IsFacingRight;
 	private float velocityXSmoothing;
 	private float velocityYSmoothing;
 	
@@ -31,9 +31,11 @@ public class Character : MonoBehaviour {
 
 	public bool _idle;
 	public bool _walk;
+	public bool _action;
 
 	public bool HasIdle;
 	public bool HasWalk;
+	public bool HasAction;
 
 	private Animator _animator;
 	public AudioClip controlSFX;
@@ -46,7 +48,7 @@ public class Character : MonoBehaviour {
 		
 		_bioPlacement = _transform.Find("BioSpot");
 		Debug.Log(_bioPlacement);
-		IsFacingRight = false;
+//		IsFacingRight = false;
 		_animator = GetComponent<Animator>();
 		characterSprite = GetComponent<SpriteRenderer>();
 	}
@@ -82,6 +84,8 @@ public class Character : MonoBehaviour {
 			_animator.SetBool("idle", _idle);
 		if(HasWalk)
 			_animator.SetBool("walk", _walk);
+		if(HasAction)
+			_animator.SetBool("action", _action);
 	}
 
 	public void SetInput(float hMove, float vMove)
