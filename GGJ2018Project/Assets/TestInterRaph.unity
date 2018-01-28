@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1553,6 +1553,11 @@ Prefab:
       propertyPath: toasterHeat
       value: 
       objectReference: {fileID: 167736690}
+    - target: {fileID: 114736626279335474, guid: b889aacfa2873f146adb41d210078e4d,
+        type: 2}
+      propertyPath: toasting
+      value: 
+      objectReference: {fileID: 8300000, guid: 35e2dde725a69104abd49ca992f707e1, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b889aacfa2873f146adb41d210078e4d, type: 2}
   m_IsPrefabParent: 0
@@ -2359,6 +2364,8 @@ MonoBehaviour:
   _walk: 0
   HasIdle: 0
   HasWalk: 0
+  controlSFX: {fileID: 0}
+  jumpSFX: {fileID: 0}
 --- !u!114 &508052654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4176,7 +4183,7 @@ Prefab:
     - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
         type: 2}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4638988839386212, guid: eb6ed36133ac7124d9ee2e4082dda239, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4255,6 +4262,71 @@ Prefab:
       propertyPath: switchSD
       value: 
       objectReference: {fileID: 8300000, guid: 11387cc2b87726243b0ec00c6de004ad, type: 3}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1296229615}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1296229615}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: PlaySoundSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: PlaySoundSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114864001639668892, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cebc0e804ded914bb4600c5baaef11f, type: 3}
+    - target: {fileID: 114027392686623514, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: OnSD
+      value: 
+      objectReference: {fileID: 8300000, guid: c879c6856ad0f7142a7df02e831e551c, type: 3}
+    - target: {fileID: 114027392686623514, guid: eb6ed36133ac7124d9ee2e4082dda239,
+        type: 2}
+      propertyPath: OffSD
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cebc0e804ded914bb4600c5baaef11f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb6ed36133ac7124d9ee2e4082dda239, type: 2}
   m_IsPrefabParent: 0
@@ -5336,6 +5408,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1296229615}
+        m_MethodName: PlaySoundSFX
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 11387cc2b87726243b0ec00c6de004ad,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7241,6 +7325,16 @@ Prefab:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114071923686929528, guid: 7ca950d81bbaf3749b318472b27ed016,
+        type: 2}
+      propertyPath: controlSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 6dcebcc2dfdfced49bb6787c6b65ecb6, type: 3}
+    - target: {fileID: 114071923686929528, guid: 7ca950d81bbaf3749b318472b27ed016,
+        type: 2}
+      propertyPath: jumpSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: cc624421e4fae474cb03e2591638cbb3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ca950d81bbaf3749b318472b27ed016, type: 2}
   m_IsPrefabParent: 0
