@@ -24,7 +24,7 @@ public class StairController : MonoBehaviour
 	{
 		if (CheckEndLevel1Conditions(other))
 		{
-			LevelManager.Instance.ChangeSceneTo(1);
+			LevelManager.Instance.ChangeSceneTo(0);
 		}
 	}
 
@@ -32,7 +32,7 @@ public class StairController : MonoBehaviour
 	{
 		if (CheckEndLevel1Conditions(other))
 		{
-			LevelManager.Instance.ChangeSceneTo(1);
+			LevelManager.Instance.ChangeSceneTo(0);
 		}
 	}
 }
