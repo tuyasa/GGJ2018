@@ -17,12 +17,14 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 
 	public PlasmaBowl PlasmaBowl;
 
-	private void Awake()
+    public AudioClip ZapSound;
+    public AudioClip PlasmaBallSound;
+
+    private void Awake()
 	{
 		Volt.transform.position = currentNode.VoltPlaceHolder.transform.position;
-		
-		
-	}
+
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -31,31 +33,44 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 	
 	// Update is called once per frame
 	void Update () {
-		if(IsFree)
-			HandleNetworkInput();
-	}
+        if (IsFree)
+        {
+            HandleNetworkInput();
+        }
+			
+    }
 	
 	void HandleNetworkInput()
 	{
 		if (Input.GetButtonDown("VoltUp"))
 		{
 			currentNode.SwitchNodeUp();
-		}else if (Input.GetButtonDown("VoltDown"))
+            playZapSound();
+        }
+
+        else if (Input.GetButtonDown("VoltDown"))
 		{
 			currentNode.SwitchNodeDown();
-		}else if (Input.GetButtonDown("VoltLeft"))
+            playZapSound();
+        }
+
+        else if (Input.GetButtonDown("VoltLeft"))
 		{
 			currentNode.SwitchNodeLeft();
-		}else if (Input.GetButtonDown("VoltRight"))
+            playZapSound();
+        }
+
+        else if (Input.GetButtonDown("VoltRight"))
 		{
 			currentNode.SwitchNodeRight();
-		}
+            playZapSound();
+        }
 
 		if (Input.GetButtonDown("VoltActivate"))
 		{
 			currentNode.ActivePower();
-		}
-	}
+        }
+    }
 
 	public void FreeVolt()
 	{
@@ -63,5 +78,13 @@ public class NetworkManager : PersistentSingleton<NetworkManager>
 		currentNode.SwitchNodeDown();
 		IsFree = true;
 		PlasmaBowl.Disable();
-	}
+    }
+
+    public void playZapSound()
+    {
+        if (ZapSound)
+        {
+            SoundManager.Instance.PlaySoundSFX(ZapSound);
+        }
+    }
 }

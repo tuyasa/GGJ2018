@@ -21,8 +21,11 @@ public class NetworkHack : MonoBehaviour
 	
 	public NetworkNodePair pair;
 	public GameObject LinkToRepair;
-	// Use this for initialization
-	void Start () {
+
+    public SwitchSpriteController SwitchSpriteController;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -31,9 +34,12 @@ public class NetworkHack : MonoBehaviour
 		
 	}
 
+
 	public void ReActivateLink()
 	{
-		switch (pair.TargetNetworkDirection)
+        SwitchSpriteController.SwitchSprite();
+
+        switch (pair.TargetNetworkDirection)
 		{
 			case NetworkDirection.Up:
 				pair.Source.TargetNodeUp = pair.Destination;
