@@ -538,7 +538,7 @@ Prefab:
         type: 2}
       propertyPath: ActivePowerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 8300000, guid: 8950f6f26bd0aa44eb42483fc43ba29e, type: 3}
+      objectReference: {fileID: 8300000, guid: 0c4665783ce7038478cfe4c5b69c5a57, type: 3}
     - target: {fileID: 114324761023442380, guid: b906693e35699f842a1c40fa9cdfc0c8,
         type: 2}
       propertyPath: ActivePowerEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1300,7 +1300,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 87a5acb9e35dbc2488fedbbaf9edc2a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2900,18 +2900,7 @@ MonoBehaviour:
   Activate: 0
   triggerEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: MoveAlongPath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   SwitchSpriteController: {fileID: 0}
@@ -3717,7 +3706,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4914ceae54af80749a7e505f43e33561, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3735,8 +3724,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1330168535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.951, y: -2.418, z: 0}
-  m_LocalScale: {x: 1.7657683, y: 1.5936239, z: 1}
+  m_LocalPosition: {x: 9.951, y: -2.442, z: 0}
+  m_LocalScale: {x: 1.7657683, y: 1.6420859, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 30
@@ -4652,7 +4641,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 43acc2893d616f249b25030e0ed1ec41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
