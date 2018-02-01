@@ -1,4 +1,4 @@
-﻿﻿using Managers;
+﻿using Managers;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
@@ -7,6 +7,7 @@ public class Character : MonoBehaviour {
 	public float ySpeed;
 	public CharacterType type = CharacterType.Flyer;
 	public float jumpForce;
+    public bool firstjump = true;
 
 	private bool _isHosting = false;
 	private float _nextJump;
@@ -70,12 +71,19 @@ public class Character : MonoBehaviour {
 	{
 		if (_isHosting && type.Equals(CharacterType.Jumper) && _controller.State.below)
 		{
+			if (firstjump != true) {
+				_controller.SetYVelocity (jumpForce);
 			
-			_controller.SetYVelocity(jumpForce);
-			if (jumpSFX)
-			{
-				SoundManager.Instance.PlaySoundSFX(jumpSFX);
+				if (jumpSFX) {
+					SoundManager.Instance.PlaySoundSFX (jumpSFX);
+				} 
 			}
+
+			else{
+				_controller.SetYVelocity (10);
+				firstjump = false;
+			}
+
 		}
 		
 	}

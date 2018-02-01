@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class SwitchSpriteController : MonoBehaviour
 {
 	public Sprite []newSprites;
 	private SpriteRenderer _spriteRenderer;
 	public int index;
+    public UnityEvent triggerEvent;
 
-	private void Awake()
+    private void Awake()
 	{
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -29,7 +31,7 @@ public class SwitchSpriteController : MonoBehaviour
 			index++;
 			Debug.Log("switch sprite");
 		}
-		
-		
-	}
+
+        triggerEvent.Invoke();
+    }
 }

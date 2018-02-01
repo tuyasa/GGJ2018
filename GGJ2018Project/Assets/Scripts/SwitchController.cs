@@ -8,7 +8,8 @@ public class SwitchController : MonoBehaviour
 	public UnityEvent triggerEvent;
     public SwitchSpriteController SwitchSpriteController;
     public SwitchSpriteController Hack2SwitchSpriteController;
-   
+    public ReverseSwitchSpriteController ReverseSwitchController;
+
 
 
     //	public int Counter = 1;
@@ -26,11 +27,15 @@ public class SwitchController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (Activate && other.gameObject.GetComponent<Character>() != null)
-		{	
-			triggerEvent.Invoke();
+		{
+            triggerEvent.Invoke();
 
+            if(Activate)
+            ResetButtonState();
         }
-	}
+
+        
+    }
 
 
 	public void ActivateTriggerAble()
@@ -38,6 +43,12 @@ public class SwitchController : MonoBehaviour
 		Activate = true;
         SwitchSpriteController.SwitchSprite();
         Hack2SwitchSpriteController.SwitchSprite();
+       
+    }
+
+    public void ResetButtonState()
+    {
+        ReverseSwitchController.SwitchSprite();
     }
 
 }

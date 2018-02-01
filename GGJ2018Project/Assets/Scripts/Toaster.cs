@@ -13,9 +13,10 @@ public class Toaster : MonoBehaviour
 	public int state = 0;
 	
 	public AudioClip toasting;
-	// Use this for initialization
+    public AudioClip poppingBread;
+    // Use this for initialization
 
-	private void Awake()
+    private void Awake()
 	{
 		toasterHeat.SetActive(false);
 		toasterSmoke.SetActive(false);
@@ -36,11 +37,12 @@ public class Toaster : MonoBehaviour
 		if (state == 1)
 		{
 			
-			SoundManager.Instance.PlaySoundSFX(toasting);
+			SoundManager.Instance.PlaySoundSFX(poppingBread);
 			StateOne();
 		}else if (state == 2)
 		{
-			StateTwo();
+            SoundManager.Instance.PlaySoundSFX(toasting);
+            StateTwo();
 		}else if (state == 0)
 		{
 			
@@ -55,7 +57,8 @@ public class Toaster : MonoBehaviour
 
 	public void StateTwo()
 	{
-		toasterSmoke.SetActive(true);
+        toasterHeat.SetActive(false);
+        toasterSmoke.SetActive(true);
 		SwitchSpriteController.SwitchSprite();
 		human.MoveAlongPath();
 		Character character = human.GetComponent<Character>();
